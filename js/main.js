@@ -6,11 +6,26 @@ const canvas =document.getElementById("pingpong");
 //getContext gives us method and properities to draw the canvas
 const context = canvas.getContext("2d");
 
-//fill the paddle
-context.fillStyle ="#be4154";
+//create object for User Paddle
+const user = {
+    x : 0, // left side of canvas
+    y : (canvas.height - 100)/2, // -100 the height of paddle
+    width : 20,
+    height : 120,
+    score : 0,
+    color : "#be4154"
+}
 
-//size the paddle or postion  
-context.fillRect(100,200,50,75);
+
+// create object for Computer Paddle
+const com = {
+    x : canvas.width - 20, // - width of paddle
+    y : (canvas.height - 100)/2, // -100 the height of paddle
+    width : 20,
+    height : 120,
+    score : 0,
+    color : "#be4154"
+}
 
 
 //draw rectangle function  to draw paddles
@@ -31,3 +46,8 @@ function drawCir (){
 }
 
 
+// invoke draw rect fanction to draw user's paddle
+drawRec(user.x, user.y, user.width, user.height, user.color);
+
+//  invoke draw rect fanction to draw computer's paddle
+drawRec(com.x, com.y, com.width, com.height, com.color);
