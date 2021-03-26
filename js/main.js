@@ -1,4 +1,4 @@
-
+// net color #77887a
 
 //select the canvas element and set it inside canvas constent
 const canvas =document.getElementById("pingpong");
@@ -27,14 +27,16 @@ const com = {
     color : "#bf6d40"
 }
 
-
 // create object for  the Ball 
 const ball = {
     x : canvas.width/2,
     y : canvas.height/2,
-    radius : 10,
-    color : "#77887a"
+    radius : 15,
+
+    color : "#d6c629"
 }
+
+
 
 
 //draw rectangle function  to draw paddles
@@ -45,13 +47,12 @@ function drawRec (x,y,w,h,color){
 }
 
 //draw circle function to draw the ball
-function drawCircle (){
+function drawCir(x, y, r, color){
     context.fillStyle = color;
     context.beginPath();
-    context.arc(x,y,r,0,Math.PI*2,false);
+    context.arc(x,y,r,0,Math.PI*2,true);
     context.closePath();
     context.fill();
-
 }
 
 
@@ -61,5 +62,23 @@ drawRec(user.x, user.y, user.width, user.height, user.color);
 //  invoke draw rect fanction to draw computer's paddle
 drawRec(com.x, com.y, com.width, com.height, com.color);
 
-// invoke draw rect fanction to draw the ball
-drawCircle(ball.x, ball.y, ball.radius, ball.color);
+// invoke draw circle fanction to draw the ball
+drawCir(ball.x, ball.y, ball.radius, ball.color);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
