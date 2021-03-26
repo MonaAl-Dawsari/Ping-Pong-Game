@@ -25,6 +25,10 @@ body {
         background-position: 0px 0px;
     }
 }
+#pingpong{
+    background-color: rgb(101, 222, 238);
+    opacity: 0.5;
+}
 
 
 
