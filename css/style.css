@@ -27,7 +27,12 @@ body {
 }
 #pingpong{
     background-color: rgb(101, 222, 238);
-    opacity: 0.5;
+    opacity: 1;
+    position:absolute;
+     top: 25%;
+      left: 20%;
+
+
 }
 
 

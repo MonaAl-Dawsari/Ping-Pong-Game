@@ -10,3 +10,11 @@ context.fillStyle ="black";
 
 //size the paddle or postion  
 context.fillRect(100,200,50,75);
+
+
+//draw rectangle function  to draw paddles
+function drawRec (x,y,w,h,color){
+    context.fillStyle= color;
+    context.fillRect(x,y,w,h);
+
+}
