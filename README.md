@@ -5,7 +5,7 @@ ping pong, is a game in which two players (you and the computer) hit a little, l
 
 ## technologies used
 * canvas in HTML 5
-* animation by keyfram in CSS3
+* animation by keyfram in CSS3 for the background 
 
 ## wireframes and user stories
 
