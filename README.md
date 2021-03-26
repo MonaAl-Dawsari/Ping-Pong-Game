@@ -1,3 +1,16 @@
 # PingPong-game-Mona
 
-## Technical requirements
+## technologies used
+
+## wireframes and user stories
+
+## about the game 
+
+
+## Challanges
+
+
+## the winner
+
+
+## some of my favorite functions
