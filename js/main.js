@@ -6,6 +6,9 @@ const canvas =document.getElementById("pingpong");
 //getContext gives us method and properities to draw the canvas
 const context = canvas.getContext("2d");
 
+
+
+
 //create object for User Paddle
 const user = {
     x : 0, // left side of canvas
@@ -38,7 +41,6 @@ const ball = {
 
 
 
-
 //draw rectangle function  to draw paddles
 function drawRec (x,y,w,h,color){
     context.fillStyle= color;
@@ -56,6 +58,9 @@ function drawCir(x, y, r, color){
 }
 
 
+
+
+
 // invoke draw rect fanction to draw user's paddle
 drawRec(user.x, user.y, user.width, user.height, user.color);
 
@@ -65,7 +70,18 @@ drawRec(com.x, com.y, com.width, com.height, com.color);
 // invoke draw circle fanction to draw the ball
 drawCir(ball.x, ball.y, ball.radius, ball.color);
 
+// create function for the score called drawText
+function drawText(text,x,y,color){
+    context.fillStyle = color;
+    context.font = "80px fantasy";
+    context.fillText(text, x, y);
+}
 
+//draw the score for the User 
+drawText (user.score,canvas.width/4,canvas.height/5,"#be4154");
+
+//draw the score for the computer
+drawText (com.score,(canvas.width/4)*3,canvas.height/5,"#bf6d40");
 
 
 
