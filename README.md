@@ -1,6 +1,7 @@
 # PingPong-game-Mona
 ping pong, is a game in which two players (you and the computer) hit a little, light ball back and forth across a table using a small paddle. A point is scored when a player fails to return the ball to the other player.
 
+![PingPong](https://upload.wikimedia.org/wikipedia/commons/6/62/Pong_Game_Test2.gif)
 
 
 ## technologies used

@@ -90,7 +90,7 @@ function drawText(text, x, y, color) {
 
 
 
-//drawing function the does all the drawing
+//drawing function that does all the drawing
 function drawin() {
 
     //clear the canvas 
