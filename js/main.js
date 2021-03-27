@@ -40,6 +40,14 @@ const ball = {
 }
 
 
+//create object for the net
+const net = {
+    x : (canvas.width - 2)/2,
+    y : 0,
+    height : 15,
+    width : 2,
+    color : "WHITE"
+}
 
 //draw rectangle function  to draw paddles
 function drawRec (x,y,w,h,color){
@@ -58,7 +66,12 @@ function drawCir(x, y, r, color){
 }
 
 
-
+//draw net function to draw the net
+function drawNet(){
+    for(let i = 0; i <= canvas.height; i+=20){
+        drawRec(net.x, net.y + i, net.width, net.height, net.color);
+    }
+}
 
 
 // invoke draw rect fanction to draw user's paddle
@@ -67,8 +80,14 @@ drawRec(user.x, user.y, user.width, user.height, user.color);
 //  invoke draw rect fanction to draw computer's paddle
 drawRec(com.x, com.y, com.width, com.height, com.color);
 
+
+//draw net
+drawNet();
+
 // invoke draw circle fanction to draw the ball
 drawCir(ball.x, ball.y, ball.radius, ball.color);
+
+
 
 // create function for the score called drawText
 function drawText(text,x,y,color){
