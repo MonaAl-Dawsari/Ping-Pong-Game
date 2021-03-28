@@ -33,9 +33,9 @@ const ball = {
     x: canvas.width / 2,
     y: canvas.height / 2,
     radius: 15,
-    velocityX : 4,
-    velocityY : 4,
-    speed : 4,
+    velocityX: 4,
+    velocityY: 4,
+    speed: 4,
     color: "#d6c629"
 }
 
@@ -102,17 +102,51 @@ function drawin() {
     drawCir(ball.x, ball.y, ball.radius, ball.color);
 }
 
+//control the user paddle
+
+canvas.addEventListener("mousemove", movePadlle);
+
+function movePadlle(event) {
+    let rect = canvas.getBoundingClientRect();
+
+    user.y = event.clientY - rect.top - user.height / 2;
+}
 
 
+/*
+//collision function
+function collision (b,p){//b for ball , p for player
+ b.top=b.y -b.radius;
+ b.bottom=b.y +b.radius;
+ b.left=b.x-b.radius;
+ b.right=b.x+b.radius;
+ 
+ p.top=p.y;
+ p.bottom=p.y +p.height;
+ p.left=p.x;
+ p.right=p.x+p.width;
+//test if there is collision or not
+ return b.right>p.left&&b.bottom>p.top && b.left < p.right && b.top<p.bottom;
+ 
+}
+
+*/
 
 //update function for the logic of the game
 function update() {
     ball.x += ball.velocityX;
     ball.y += ball.velocityY;
-   if (ball.y+ ball.radius>canvas.height || ball.y - ball.radius< 0){
-        ball.velocityY= -ball.velocityY;
+    if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
+        ball.velocityY = -ball.velocityY;
     }
+    /*
+    //test if the ball in player side or computer side
+let player =(ball.x<canvas.width/2)? user:com;
+if (collision(ball.player)){
 
+
+}
+*/
 }
 
 
