@@ -103,7 +103,6 @@ function drawin() {
 }
 
 //control the user paddle
-
 canvas.addEventListener("mousemove", movePadlle);
 
 function movePadlle(event) {
@@ -113,12 +112,12 @@ function movePadlle(event) {
 }
 
 
-/*
+
 //collision function
 function collision (b,p){//b for ball , p for player
- b.top=b.y -b.radius;
- b.bottom=b.y +b.radius;
- b.left=b.x-b.radius;
+ b.top = b.y -b.radius;
+ b.bottom = b.y +b.radius;
+ b.left = b.x-b.radius;
  b.right=b.x+b.radius;
  
  p.top=p.y;
@@ -126,16 +125,22 @@ function collision (b,p){//b for ball , p for player
  p.left=p.x;
  p.right=p.x+p.width;
 //test if there is collision or not
- return b.right>p.left&&b.bottom>p.top && b.left < p.right && b.top<p.bottom;
- 
+ return b.right>p.left && b.bottom>p.top && b.left < p.right && b.top<p.bottom;
 }
 
-*/
+
 
 //update function for the logic of the game
 function update() {
     ball.x += ball.velocityX;
     ball.y += ball.velocityY;
+
+
+    //AI to control the computer paddle 
+    let computerAI=0.1
+    com.y += (ball.y-(com.y+com.height/2))
+
+    // for the ball if it hit the bottom or the top
     if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
         ball.velocityY = -ball.velocityY;
     }
