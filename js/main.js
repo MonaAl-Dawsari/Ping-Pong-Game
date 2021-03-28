@@ -112,21 +112,22 @@ function movePadlle(event) {
 }
 
 
-
 //collision function
 function collision (b,p){//b for ball , p for player
- b.top = b.y -b.radius;
- b.bottom = b.y +b.radius;
- b.left = b.x-b.radius;
- b.right=b.x+b.radius;
+    b.top = b.y - b.radius;
+    b.bottom = b.y + b.radius;
+    b.left = b.x - b.radius;
+    b.right = b.x + b.radius;
  
- p.top=p.y;
- p.bottom=p.y +p.height;
- p.left=p.x;
- p.right=p.x+p.width;
+    p.top = p.y;
+    p.bottom = p.y + p.height;
+    p.left = p.x;
+    p.right = p.x + p.width;
 //test if there is collision or not
- return b.right>p.left && b.bottom>p.top && b.left < p.right && b.top<p.bottom;
+return p.left < b.right && p.top < b.bottom && p.right > b.left && p.bottom > b.top;
 }
+
+
 
 
 
@@ -138,24 +139,27 @@ function update() {
 
     //AI to control the computer paddle 
     let computerAI=0.1
-    com.y += (ball.y-(com.y+com.height/2))
+    com.y += (ball.y-(com.y+com.height/2));
 
     // for the ball if it hit the bottom or the top
     if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
         ball.velocityY = -ball.velocityY;
     }
-    /*
-    //test if the ball in player side or computer side
-let player =(ball.x<canvas.width/2)? user:com;
-if (collision(ball.player)){
+    
+    //check if the paddle hit the user or the com paddle
+let player =(ball.x < canvas.width/2) ? user : com;
+if (collision(ball,player)){
+    let collidePoint =(ball.y-(player.y+player.height/2));
+    collidePoint= collidePoint/(player.height/2); 
+     let angle =(Math.PI/4)*collidePoint;
+     let direction =(ball.x<canvas.width/2)? 1:-1;
+     ball.velocityX=direction*ball.speed*Math.cos(angle);
+     ball.velocityY=direction*ball.speed*Math.sin(angle);
+     ball.speed+=0.1;
 
+  } 
 
 }
-*/
-}
-
-
-
 //the main function that will call two function 
 //1-drawin function for drawing the objects 
 //2-update function for the logic of the game
@@ -166,7 +170,4 @@ function game() {
 // loop for call the game function 50 times in one second
 const framePerSec = 100;
 setInterval(game, 1000 / framePerSec);
-
-
-
 
