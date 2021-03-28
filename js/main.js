@@ -33,9 +33,9 @@ const ball = {
     x: canvas.width / 2,
     y: canvas.height / 2,
     radius: 15,
-    velocityX : 5,
-    velocityY : 5,
-    speed : 5,
+    velocityX : 4,
+    velocityY : 4,
+    speed : 4,
     color: "#d6c629"
 }
 
@@ -107,6 +107,11 @@ function drawin() {
 
 //update function for the logic of the game
 function update() {
+    ball.x += ball.velocityX;
+    ball.y += ball.velocityY;
+   if (ball.y+ ball.radius>canvas.height || ball.y - ball.radius< 0){
+        ball.velocityY= -ball.velocityY;
+    }
 
 }
 

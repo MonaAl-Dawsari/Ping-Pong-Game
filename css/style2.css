@@ -11,10 +11,11 @@
     font-family: 'Press Start 2P', cursive;
 
     letter-spacing: .1em;
-  
+    background-color: #c0bfb4;
+    border-radius: 55px;
   }
   .title h1 {
-      color: #c0bfb4;
+      color: #000000;
       text-align: center;
   }
   .con {
@@ -30,7 +31,7 @@
   }
   
   .btn {
-    color: #000000;
+    color: #520d16;
   }
   a {
       text-decoration: none;
