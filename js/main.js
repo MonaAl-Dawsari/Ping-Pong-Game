@@ -1,13 +1,11 @@
-// net color #77887a
+
+
 
 //select the canvas element and set it inside canvas constent
 const canvas = document.getElementById("pingpong");
 
 //getContext gives us method and properities to draw the canvas
 const context = canvas.getContext("2d");
-
-
-
 
 //create object for User Paddle
 const user = {
@@ -35,7 +33,9 @@ const ball = {
     x: canvas.width / 2,
     y: canvas.height / 2,
     radius: 15,
-
+    velocityX : 5,
+    velocityY : 5,
+    speed : 5,
     color: "#d6c629"
 }
 
@@ -73,14 +73,6 @@ function drawNet() {
     }
 }
 
-
-
-
-
-
-
-
-
 // create function for the score called drawText
 function drawText(text, x, y, color) {
     context.fillStyle = color;
@@ -88,13 +80,11 @@ function drawText(text, x, y, color) {
     context.fillText(text, x, y);
 }
 
-
-
 //drawing function that does all the drawing
 function drawin() {
 
     //clear the canvas 
-   drawRec(0, 0, canvas.width, canvas.height, "#f5deb3");
+    drawRec(0, 0, canvas.width, canvas.height, "#f5deb3");
 
     //draw net
     drawNet();
@@ -113,19 +103,25 @@ function drawin() {
 }
 
 
-function game (){
-    drawin ();
+
+
+//update function for the logic of the game
+function update() {
+
 }
 
-const framePerSec =100;
-setInterval(game,1000/framePerSec);
 
 
-
-
-
-
-
+//the main function that will call two function 
+//1-drawin function for drawing the objects 
+//2-update function for the logic of the game
+function game() {
+    update();
+    drawin();
+}
+// loop for call the game function 50 times in one second
+const framePerSec = 100;
+setInterval(game, 1000 / framePerSec);
 
 
 
