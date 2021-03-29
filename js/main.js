@@ -126,8 +126,14 @@ function collision (b,p){//b for ball , p for player
 //test if there is collision or not
 return p.left < b.right && p.top < b.bottom && p.right > b.left && p.bottom > b.top;
 }
+//reset the ball when the player or the computer score point
+function resetBall (){
 
-
+    ball.x=canvas.width/2;
+    ball.y=canvas.height/2;
+    ball.speed=5;
+    ball.velocityX=-ball.velocityX;
+}
 
 
 
@@ -138,8 +144,8 @@ function update() {
 
 
     //AI to control the computer paddle 
-    let computerAI=0.1
-    com.y += (ball.y-(com.y+com.height/2));
+    let comLevel=0.1;
+    com.y += (ball.y-(com.y+com.height/2))*comLevel;
 
     // for the ball if it hit the bottom or the top
     if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
@@ -158,7 +164,19 @@ if (collision(ball,player)){
      ball.speed+=0.1;
 
   } 
+//update the score 
 
+//add score to the computer
+if (ball.x-ball.radius<0){
+   com.score++;
+   resetBall ();
+}
+//add score to the player
+else if (ball.x-ball.radius>canvas.width){
+
+user.score++;
+resetBall ();
+}
 }
 //the main function that will call two function 
 //1-drawin function for drawing the objects 
@@ -168,6 +186,6 @@ function game() {
     drawin();
 }
 // loop for call the game function 50 times in one second
-const framePerSec = 100;
+const framePerSec = 50;
 setInterval(game, 1000 / framePerSec);
 
