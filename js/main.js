@@ -7,6 +7,19 @@ const canvas = document.getElementById("pingpong");
 //getContext gives us method and properities to draw the canvas
 const context = canvas.getContext("2d");
 
+//load sounds
+let userScore =new Audio ();
+let comScore=new Audio();
+let hit = new Audio ();
+let wall =new Audio ();
+
+
+hit.src = "../sounds/sounds_hit.mp3";
+wall.src = "../sounds/sounds_wall.mp3";
+comScore.src = "../sounds/sounds_comScore.mp3";
+userScore.src = "../sounds/sounds_userScore.mp3";
+
+
 //create object for User Paddle
 const user = {
     x: 0, // left side of canvas
@@ -135,7 +148,15 @@ function resetBall (){
     ball.velocityX=-ball.velocityX;
 }
 
-
+/*
+//the winner
+function winner (){
+    if (user.score<com.score){
+        alert("the computer Wins!");
+    }
+   else { alert("the player Wins!");}
+  
+  }*/
 
 //update function for the logic of the game
 function update() {
@@ -150,11 +171,14 @@ function update() {
     // for the ball if it hit the bottom or the top
     if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
         ball.velocityY = -ball.velocityY;
+        wall.play();
     }
     
     //check if the paddle hit the user or the com paddle
 let player =(ball.x < canvas.width/2) ? user : com;
 if (collision(ball,player)){
+    // play sound
+    hit.play();
     let collidePoint =(ball.y-(player.y+player.height/2));
     collidePoint= collidePoint/(player.height/2); 
      let angle =(Math.PI/4)*collidePoint;
@@ -163,27 +187,41 @@ if (collision(ball,player)){
      ball.velocityY=direction*ball.speed*Math.sin(angle);
      ball.speed+=0.1;
 
+
   } 
+
 //update the score 
 
 //add score to the computer
 if (ball.x-ball.radius<0){
    com.score++;
+   comScore.play();
    resetBall ();
+   
 }
 //add score to the player
 else if (ball.x-ball.radius>canvas.width){
 
 user.score++;
+userScore.play();
 resetBall ();
+
+
 }
+
+
+
+ 
 }
+
+
 //the main function that will call two function 
 //1-drawin function for drawing the objects 
 //2-update function for the logic of the game
 function game() {
     update();
     drawin();
+    
 }
 // loop for call the game function 50 times in one second
 const framePerSec = 50;
