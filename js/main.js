@@ -146,17 +146,10 @@ function resetBall (){
     ball.y=canvas.height/2;
     ball.speed=5;
     ball.velocityX=-ball.velocityX;
+    winner();
 }
 
-/*
-//the winner
-function winner (){
-    if (user.score<com.score){
-        alert("the computer Wins!");
-    }
-   else { alert("the player Wins!");}
-  
-  }*/
+
 
 //update function for the logic of the game
 function update() {
@@ -198,6 +191,7 @@ if (ball.x-ball.radius<0){
    comScore.play();
    resetBall ();
    
+   
 }
 //add score to the player
 else if (ball.x-ball.radius>canvas.width){
@@ -227,3 +221,19 @@ function game() {
 const framePerSec = 50;
 setInterval(game, 1000 / framePerSec);
 
+
+//the winner
+function winner (){
+if (user.score ==5|| com.score ==5){
+     if (user.score<com.score){
+         alert("computer wins!"); 
+         user.score=0;
+         com.score=0;
+     }
+     else {alert ("player wins!");
+     user.score=0;
+     com.score=0;
+    }
+}
+  
+  }
