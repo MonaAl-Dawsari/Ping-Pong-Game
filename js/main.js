@@ -226,7 +226,7 @@ setInterval(game, 1000 / framePerSec);
 function winner (){
 if (user.score ==5|| com.score ==5){
      if (user.score<com.score){
-         alert("computer wins!"); 
+         alert("computer wins! I told you."); 
          user.score=0;
          com.score=0;
      }
