@@ -21,16 +21,16 @@ As person who used to enjoy playing computer game when i was child ,I really wan
 ## About development process
 * Create New Repository in GitHub Enterprise called PingPong-game-Mona.
 * Prepare the Folders and Files for the game.
-- create README.md
-- create index.html
+    - create README.md
+    - create index.html
 
-- create firstpage.html
-- create css folder 
-- create styles.css
-- create another styles.css
+    - create firstpage.html
+    - create css folder 
+    - create styles.css
+    - create another styles.css
 
-- create js folder
-- create main.js
+    - create js folder
+        - create main.js
 - create sounds folder 
 
 I used "visual studio code" as my text editor. and create some folders and file for my project.
@@ -111,7 +111,7 @@ function drawNet() {
 
 
 
-
+### preview of the game : 
 The Firt page in the game 
 ![firstpage](https://files.slack.com/files-pri/T0351JZQ0-F01STM31351/vid-20210329-wa0008.gif)
 
@@ -129,7 +129,7 @@ After you read the instructer and click start  you will see Our Ping Pong game  
 ![playtable elemnet](https://files.slack.com/files-pri/T0351JZQ0-F01TH821E72/playrable_-_copy.png)
 
 
-### preview of the game :
+
 when the game start you can control the user paddle using the mouse when the paddle hit the ball its direction or angle it is depent on where  the paddle hits the ball, and  when the ball hit the paddles its speed increase .
 
 
