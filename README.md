@@ -19,10 +19,15 @@ As person who used to enjoy playing computer game when i was child ,I really wan
 
 ## About development process
 
+I used "visual studio code" as my text editor. and create some folders and file for my project.
+I like to organize everything from the beginning. So,I created a folder structure similar to below:
+![Folders and Files](https://files.slack.com/files-pri/T0351JZQ0-F01STFU1AM9/image.png)
 
+
+![]()
+![]()
 
 ![create paddle](https://files.slack.com/files-pri/T0351JZQ0-F01SXK1KY01/img_20210326_174651.jpg)
-
 
 
 ## Challanges
