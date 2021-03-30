@@ -11,10 +11,14 @@ ping pong, is a game in which two players (you and the computer) hit a little, l
 * Javascript Dom Manipulation
 
 ## wireframes and user stories
-
+### wireframes 
 ![wireframe](https://files.slack.com/files-pri/T0351JZQ0-F01S47LN0R5/img_20210325_205034.jpg)
+### user story
+As person who used to enjoy playing computer game when i was child ,I really want to have the experience to play old computer game as ping pong but with lots of color and life so i can enjoy it again
+
 
 ## about development process
+
 
 
 ![create paddle](https://files.slack.com/files-pri/T0351JZQ0-F01SXK1KY01/img_20210326_174651.jpg)
@@ -25,7 +29,7 @@ ping pong, is a game in which two players (you and the computer) hit a little, l
 
 
 ## the winner
-
+the one who score 5 point (you or the computer) before the other will win! be calm there no limit time. Although I doubt you are able to win!
 
 ## some of my favorite functions
 
