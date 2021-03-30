@@ -1,6 +1,5 @@
 
 
-
 //select the canvas element and set it inside canvas constent
 const canvas = document.getElementById("pingpong");
 
@@ -8,10 +7,10 @@ const canvas = document.getElementById("pingpong");
 const context = canvas.getContext("2d");
 
 //load sounds
-let userScore =new Audio ();
-let comScore=new Audio();
-let hit = new Audio ();
-let wall =new Audio ();
+let userScore = new Audio();
+let comScore = new Audio();
+let hit = new Audio();
+let wall = new Audio();
 
 
 hit.src = "../sounds/sounds_hit.mp3";
@@ -89,7 +88,7 @@ function drawNet() {
 // create function for the score called drawText
 function drawText(text, x, y, color) {
     context.fillStyle = color;
-    context.font = '80px "Audiowide", sans-serif';
+    context.font = '50px "Changa", sans-serif';
     context.fillText(text, x, y);
 }
 
@@ -126,26 +125,26 @@ function movePadlle(event) {
 
 
 //collision function
-function collision (b,p){//b for ball , p for player
+function collision(b, p) {//b for ball , p for player
     b.top = b.y - b.radius;
     b.bottom = b.y + b.radius;
     b.left = b.x - b.radius;
     b.right = b.x + b.radius;
- 
+
     p.top = p.y;
     p.bottom = p.y + p.height;
     p.left = p.x;
     p.right = p.x + p.width;
-//test if there is collision or not
-return p.left < b.right && p.top < b.bottom && p.right > b.left && p.bottom > b.top;
+    //test if there is collision or not
+    return p.left < b.right && p.top < b.bottom && p.right > b.left && p.bottom > b.top;
 }
 //reset the ball when the player or the computer score point
-function resetBall (){
+function resetBall() {
 
-    ball.x=canvas.width/2;
-    ball.y=canvas.height/2;
-    ball.speed=5;
-    ball.velocityX=-ball.velocityX;
+    ball.x = canvas.width / 2;
+    ball.y = canvas.height / 2;
+    ball.speed = 5;
+    ball.velocityX = -ball.velocityX;
     winner();
 }
 
@@ -158,54 +157,48 @@ function update() {
 
 
     //AI to control the computer paddle 
-    let comLevel=0.1;
-    com.y += (ball.y-(com.y+com.height/2))*comLevel;
+    let comLevel = 0.1;
+    com.y += (ball.y - (com.y + com.height / 2)) * comLevel;
 
     // for the ball if it hit the bottom or the top
     if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
         ball.velocityY = -ball.velocityY;
         wall.play();
     }
-    
+
     //check if the paddle hit the user or the com paddle
-let player =(ball.x < canvas.width/2) ? user : com;
-if (collision(ball,player)){
-    // play sound
-    hit.play();
-    let collidePoint =(ball.y-(player.y+player.height/2));
-    collidePoint= collidePoint/(player.height/2); 
-     let angle =(Math.PI/4)*collidePoint;
-     let direction =(ball.x<canvas.width/2)? 1:-1;
-     ball.velocityX=direction*ball.speed*Math.cos(angle);
-     ball.velocityY=direction*ball.speed*Math.sin(angle);
-     ball.speed+=0.1;
+    let player = (ball.x < canvas.width / 2) ? user : com;
+    if (collision(ball, player)) {
+        // play sound
+        hit.play();
+        let collidePoint = (ball.y - (player.y + player.height / 2));
+        collidePoint = collidePoint / (player.height / 2);
+        let angle = (Math.PI / 4) * collidePoint;
+        let direction = (ball.x < canvas.width / 2) ? 1 : -1;
+        ball.velocityX = direction * ball.speed * Math.cos(angle);
+        ball.velocityY = direction * ball.speed * Math.sin(angle);
+        ball.speed += 0.1;
 
 
-  } 
+    }
 
-//update the score 
+    //update the score 
 
-//add score to the computer
-if (ball.x-ball.radius<0){
-   com.score++;
-   comScore.play();
-   resetBall ();
-   
-   
-}
-//add score to the player
-else if (ball.x-ball.radius>canvas.width){
-
-user.score++;
-userScore.play();
-resetBall ();
+    //add score to the computer
+    if (ball.x - ball.radius < 0) {
+        com.score++;
+        comScore.play();
+        resetBall();
 
 
-}
+    }
+    //add score to the player
+    else if (ball.x - ball.radius > canvas.width) {
 
-
-
- 
+        user.score++;
+        userScore.play();
+        resetBall();
+    }
 }
 
 
@@ -215,7 +208,7 @@ resetBall ();
 function game() {
     update();
     drawin();
-    
+
 }
 // loop for call the game function 50 times in one second
 const framePerSec = 50;
@@ -223,17 +216,18 @@ setInterval(game, 1000 / framePerSec);
 
 
 //the winner
-function winner (){
-if (user.score ==5|| com.score ==5){
-     if (user.score<com.score){
-         alert("computer wins! I told you."); 
-         user.score=0;
-         com.score=0;
-     }
-     else {alert ("player wins!");
-     user.score=0;
-     com.score=0;
+function winner() {
+    if (user.score == 5 || com.score == 5) {
+        if (user.score < com.score) {
+            alert("computer wins! I told you.");
+            user.score = 0;
+            com.score = 0;
+        }
+        else {
+            alert("player wins!");
+            user.score = 0;
+            com.score = 0;
+        }
     }
+
 }
-  
-  }
