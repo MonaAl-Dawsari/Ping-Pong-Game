@@ -47,7 +47,7 @@ const ball = {
     radius: 15,
     velocityX: 4,
     velocityY: 4,
-    speed: 4,
+    speed: 10,
     color: "#d6c629"
 }
 
@@ -143,7 +143,7 @@ function resetBall() {
 
     ball.x = canvas.width / 2;
     ball.y = canvas.height / 2;
-    ball.speed = 5;
+    ball.speed = 10;
     ball.velocityX = -ball.velocityX;
     winner();
 }
@@ -183,8 +183,12 @@ function update() {
     }
 
     //update the score 
+    addScore ();
+   
+}
 
-    //add score to the computer
+ //add score to the computer
+ function addScore (){ 
     if (ball.x - ball.radius < 0) {
         com.score++;
         comScore.play();
@@ -198,9 +202,7 @@ function update() {
         user.score++;
         userScore.play();
         resetBall();
-    }
-}
-
+    }}
 
 //the main function that will call two function 
 //1-drawin function for drawing the objects 
@@ -214,19 +216,24 @@ function game() {
 const framePerSec = 50;
 setInterval(game, 1000 / framePerSec);
 
+//reset the score 
+function resetScore (){
+    user.score = 0;
+    com.score = 0;
+
+}
 
 //the winner
 function winner() {
-    if (user.score == 5 || com.score == 5) {
+    if (user.score == 6 || com.score == 6) {
         if (user.score < com.score) {
+            
             alert("computer wins! I told you.");
-            user.score = 0;
-            com.score = 0;
+            resetScore ();
         }
         else {
             alert("player wins!");
-            user.score = 0;
-            com.score = 0;
+            resetScore ();
         }
     }
 

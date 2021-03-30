@@ -4,20 +4,20 @@ ping pong, is a game in which two players (you and the computer) hit a little, l
 ![PingPong](https://upload.wikimedia.org/wikipedia/commons/6/62/Pong_Game_Test2.gif)
 
 
-## technologies used
+## Technologies used
 * Canvas in HTML 5
 * Animation by keyfram in CSS3 for the background 
 * Use Object-oriented programming (OOP) by Javascript 
 * Javascript Dom Manipulation
 
-## wireframes and user stories
-### wireframes 
+## Wireframes and User stories
+### Wireframes 
 ![wireframe](https://files.slack.com/files-pri/T0351JZQ0-F01S47LN0R5/img_20210325_205034.jpg)
-### user story
+### User story
 As person who used to enjoy playing computer game when i was child ,I really want to have the experience to play old computer game as ping pong but with lots of color and life so i can enjoy it again
 
 
-## about development process
+## About development process
 
 
 
@@ -26,12 +26,14 @@ As person who used to enjoy playing computer game when i was child ,I really wan
 
 
 ## Challanges
+Challenging! my favorit  and the most fun part is the logic behind the game , when I decide to work on create the game I had no idea that I will had to use sin () and cos() or any kinf of complicated math !  Now I realy appreactiat the time that I spent during Math class.
 
-
-## the winner
+## The winner
 the one who score 5 point (you or the computer) before the other will win! be calm there no limit time. Although I doubt you are able to win!
 
-## some of my favorite functions
+## Some of my favorite functions
+
+collision function , 
 
 
 ## Future Features
