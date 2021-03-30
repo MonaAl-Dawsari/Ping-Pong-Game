@@ -89,7 +89,24 @@ function drawNet() {
 ```
 * create object to store the value for each componnent
 
-* Create a render() function and draw the pink game board. 
+* work on moving the ball.
+* work on collisin 
+* update the score 
+* control the user paddle 
+* create simple AI to control the computer paddle
+
+
+```javascript 
+
+ //AI to control the computer paddle 
+    let comLevel = 0.1;
+    com.y += (ball.y - (com.y + com.height / 2)) * comLevel;
+
+
+```
+
+* add sounds 
+* alert message with the winner
 
 
 
