@@ -35,3 +35,11 @@ the one who score 5 point (you or the computer) before the other will win! be ca
 
 
 ## Future Features
+* Difficulty - Easy | Medium | Hard
+* Player Controller - Swipe | Button
+* Player Position - Left | Right
+* Game Point - 3 to 15
+* Player Name - Your Name
+* Result Screen
+* Settings Panel
+
