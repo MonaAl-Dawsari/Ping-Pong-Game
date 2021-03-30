@@ -30,8 +30,8 @@ As person who used to enjoy playing computer game when i was child ,I really wan
     - create another styles.css
 
     - create js folder
-        - create main.js
-- create sounds folder 
+    - create main.js
+    - create sounds folder 
 
 I used "visual studio code" as my text editor. and create some folders and file for my project.
 I like to organize everything from the beginning. So,I created a folder structure similar to below:
@@ -159,14 +159,30 @@ the one who score 5 point (you or the computer) before the other will win! be ca
 
 ## Some of my favorite functions
 
-collision function , 
+
 
 ```javascript 
 
+//collision function
+function collision(b, p) {//b for ball , p for player
+    b.top = b.y - b.radius;
+    b.bottom = b.y + b.radius;
+    b.left = b.x - b.radius;
+    b.right = b.x + b.radius;
+
+    p.top = p.y;
+    p.bottom = p.y + p.height;
+    p.left = p.x;
+    p.right = p.x + p.width;
+    //test if there is collision or not
+    return p.left < b.right && p.top < b.bottom && p.right > b.left && p.bottom > b.top;
+}
 
 
 ```
+Here we are first taking all the sides like the top, right, bottom, and left for our ball and player. Our player object is going to be either user or com. This depends on which paddle the ball hits.
 
+After determining all the sides, we do the calculation. by working on this function I had lots of bugs and i had hard time to figer out the true calclation that's why it is my Favorite.
 ## Future Features
 * Difficulty - Easy | Medium | Hard
 * Player Controller - Swipe | Button
