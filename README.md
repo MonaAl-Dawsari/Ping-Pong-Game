@@ -40,13 +40,28 @@ After you read the instructer and click start  you will see Our Ping Pong game  
 * Two Paddles, the user and the ai
 * And our Ping Pong Ball.
 
+
+
 ![playtable elemnet](https://files.slack.com/files-pri/T0351JZQ0-F01TH821E72/playrable_-_copy.png)
-![]()
+
+
+preview of the game :
+when the game start you can control the user paddle using the mouse when the paddle hit the ball its direction or angle it is depent on where  the paddle hits the ball, and the ball hit the paddles its speed increase .
+
+![preview of the game ](https://ga-students.slack.com/files/U01MWHV3VFG/F01SCD8D2SK/ping_pong_game_-_google_chrome_2021-03-30_12-08-12.mp4)
+
+
+Now Let's BreakDown the Logic and the function behind the game.
+
+
+
+
+![](https://ga-students.slack.com/files/U01MWHV3VFG/F01SCD8D2SK/ping_pong_game_-_google_chrome_2021-03-30_12-08-12.mp4)
 ![]()
 ![]()
 ![]()
 
-![create paddle](https://files.slack.com/files-pri/T0351JZQ0-F01SXK1KY01/img_20210326_174651.jpg)
+
 
 
 ## Challanges

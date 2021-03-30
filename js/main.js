@@ -183,12 +183,12 @@ function update() {
     }
 
     //update the score 
-    addScore ();
-   
+    addScore();
+
 }
 
- //add score to the computer
- function addScore (){ 
+//add score to the computer
+function addScore() {
     if (ball.x - ball.radius < 0) {
         com.score++;
         comScore.play();
@@ -202,7 +202,8 @@ function update() {
         user.score++;
         userScore.play();
         resetBall();
-    }}
+    }
+}
 
 //the main function that will call two function 
 //1-drawin function for drawing the objects 
@@ -217,7 +218,7 @@ const framePerSec = 50;
 setInterval(game, 1000 / framePerSec);
 
 //reset the score 
-function resetScore (){
+function resetScore() {
     user.score = 0;
     com.score = 0;
 
@@ -227,13 +228,13 @@ function resetScore (){
 function winner() {
     if (user.score == 6 || com.score == 6) {
         if (user.score < com.score) {
-            
+
             alert("computer wins! I told you.");
-            resetScore ();
+            resetScore();
         }
         else {
             alert("player wins!");
-            resetScore ();
+            resetScore();
         }
     }
 
