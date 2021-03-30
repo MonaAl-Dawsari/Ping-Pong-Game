@@ -38,39 +38,6 @@ I like to organize everything from the beginning. So,I created a folder structur
 <br>
 ![Folders and Files](https://files.slack.com/files-pri/T0351JZQ0-F01STFU1AM9/image.png)
 
-
-
-
-
-The Firt page in the game 
-![firstpage](https://files.slack.com/files-pri/T0351JZQ0-F01STM31351/vid-20210329-wa0008.gif)
-
-
-After you read the instructer and click start  you will see Our Ping Pong game  components:
-
-* The game board
-* Net in the middle
-* Two Score text on either side
-* Two Paddles, the user and the ai
-* And our Ping Pong Ball.
-
-
-
-![playtable elemnet](https://files.slack.com/files-pri/T0351JZQ0-F01TH821E72/playrable_-_copy.png)
-
-
-### preview of the game :
-when the game start you can control the user paddle using the mouse when the paddle hit the ball its direction or angle it is depent on where  the paddle hits the ball, and  when the ball hit the paddles its speed increase .
-
-
-
-![preview of the game ](https://ga-students.slack.com/files/U01MWHV3VFG/F01SCD8D2SK/ping_pong_game_-_google_chrome_2021-03-30_12-08-12.mp4)
-
-
-Now Let's BreakDown the Logic and the function behind the game.
-### the play table
-I create the play table by using canvas elemnt in HTML 5 inside it we will draw the components ,control its and play our game .
-
 * create functions for draw the elements 
 - draw the paddles 
 ```javascript 
@@ -128,9 +95,34 @@ function drawNet() {
 
 
 
+The Firt page in the game 
+![firstpage](https://files.slack.com/files-pri/T0351JZQ0-F01STM31351/vid-20210329-wa0008.gif)
 
 
-![](https://ga-students.slack.com/files/U01MWHV3VFG/F01SCD8D2SK/ping_pong_game_-_google_chrome_2021-03-30_12-08-12.mp4)
+After you read the instructer and click start  you will see Our Ping Pong game  components:
+
+* The game board
+* Net in the middle
+* Two Score text on either side
+* Two Paddles, the user and the ai
+* And our Ping Pong Ball.
+
+
+
+![playtable elemnet](https://files.slack.com/files-pri/T0351JZQ0-F01TH821E72/playrable_-_copy.png)
+
+
+### preview of the game :
+when the game start you can control the user paddle using the mouse when the paddle hit the ball its direction or angle it is depent on where  the paddle hits the ball, and  when the ball hit the paddles its speed increase .
+
+
+
+![preview of the game ](https://ga-students.slack.com/files/U01MWHV3VFG/F01SCD8D2SK/ping_pong_game_-_google_chrome_2021-03-30_12-08-12.mp4)
+
+
+
+
+
 ![]()
 ![]()
 ![]()
