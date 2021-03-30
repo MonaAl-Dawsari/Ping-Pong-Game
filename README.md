@@ -28,11 +28,11 @@ I like to organize everything from the beginning. So,I created a folder structur
 
 
 
-the Firt page in the game 
+The Firt page in the game 
 ![firstpage](https://files.slack.com/files-pri/T0351JZQ0-F01STM31351/vid-20210329-wa0008.gif)
 
 
-After you read the instructer and click start  you will see Our Pong game has the following components:
+After you read the instructer and click start  you will see Our Ping Pong game  components:
 
 * The game board
 * Net in the middle
