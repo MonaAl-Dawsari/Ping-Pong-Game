@@ -25,8 +25,12 @@ I like to organize everything from the beginning. So,I created a folder structur
 ![Folders and Files](https://files.slack.com/files-pri/T0351JZQ0-F01STFU1AM9/image.png)
 
 
-![](https://files.slack.com/files-pri/T0351JZQ0-F01TH821E72/playrable_-_copy.png)
-![]()
+
+
+
+
+![playtable elemnet](https://files.slack.com/files-pri/T0351JZQ0-F01TH821E72/playrable_-_copy.png)
+![firstpage](https://ga-students.slack.com/files/U01MWHV3VFG/F01SA7ZG4TH/vid-20210329-wa0008.mp4)
 ![]()
 ![]()
 ![]()
