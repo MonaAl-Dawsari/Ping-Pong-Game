@@ -192,3 +192,6 @@ After determining all the sides, we do the calculation. by working on this funct
 * Result Screen
 * Settings Panel
 
+## Demo for the game
+https://pages.git.generalassemb.ly/monaaldaw/PingPong-game-Mona/ 
+
