@@ -134,15 +134,6 @@ when the game start you can control the user paddle using the mouse when the pad
 
 
 
-![preview of the game ](https://ga-students.slack.com/files/U01MWHV3VFG/F01SCD8D2SK/ping_pong_game_-_google_chrome_2021-03-30_12-08-12.mp4)
-
-
-
-
-
-![]()
-![]()
-![]()
 
 
 
@@ -195,3 +186,5 @@ After determining all the sides, we do the calculation. by working on this funct
 ## Demo for the game
 https://pages.git.generalassemb.ly/monaaldaw/PingPong-game-Mona/ 
 
+## presntatatin 
+inside the folder presentation.
