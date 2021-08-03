@@ -184,6 +184,7 @@ After determining all the sides, we do the calculation. by working on this funct
 * Settings Panel
 
 ## Demo for the game
+Note: Make sure to Open the game from a computer
 https://pages.git.generalassemb.ly/monaaldaw/PingPong-game-Mona/ 
 
 ## presntatatin 
